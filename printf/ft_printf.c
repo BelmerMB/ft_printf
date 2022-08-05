@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdarg.h>
+#include "ft_printf.h"
 
 static int ft_arguments(const char	*c, va_list	doguinho);
 
@@ -27,7 +26,8 @@ int	ft_printf(const char *format, ...)
 	while(format[i])
 	{
 		if(format[i] != '%')
-			count += write(1, &format[i], 1);//find another way, 
+			//I have to print a hole string at once to be more efficient
+			count += write(1, &format[i], 1);	//find another way, because Write is too slow.
 		else
 		{
 			i++;
@@ -40,12 +40,16 @@ int	ft_printf(const char *format, ...)
 
 static int ft_arguments(const char *c, va_list doguinho)
 {
-	int	d;
+	int d;
+
 	if(*c == '%')
 		return (write(1, c, 1));
-	if(*c == 'c')
+	if(*c == 'c')  // insert in another file
 	{
 		d = va_arg(doguinho, int);
 		return (write(1, &d, 1));
 	}
+	if(*c == 's')
+		return (ft_print_str(doguinho));
+	return (0);
 }

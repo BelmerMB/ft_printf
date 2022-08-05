@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_PRINTF_H
-# define HEADER_PRINTF_H
-#include <stdarg.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int ft_printf(const char *, ...);
+#include <stdarg.h>
+#include <unistd.h>
+// #include "libft.h"
+
+int	ft_printf(const char *, ...);
+int	ft_print_str(va_list	list);
 
 #endif

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 16:40:52 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/04 14:16:09 by emetras-         ###   ########.fr       */
+/*   Created: 2022/08/04 13:58:32 by emetras-          #+#    #+#             */
+/*   Updated: 2022/08/05 12:18:30 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_print_str(va_list	list)
 {
-	int	i;
+	char				*str;
+	unsigned int		i;
 
 	i = 0;
-	while (s[i])
+	str = va_arg(list, char *);
+	while (str[i])
 		i++;
-	write(fd, s, i);
+	return (write(1, str, i));
 }
