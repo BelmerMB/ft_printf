@@ -40,16 +40,19 @@ int	ft_printf(const char *format, ...)
 
 static int ft_arguments(const char *c, va_list doguinho)
 {
-	int d;
+	int ax;
 
 	if(*c == '%')
 		return (write(1, c, 1));
-	if(*c == 'c')  // insert in another file
+	if(*c == 'c')  //put in to another file
 	{
-		d = va_arg(doguinho, int);
-		return (write(1, &d, 1));
+		ax = va_arg(doguinho, int);
+		return (write(1, &ax, 1));
 	}
 	if(*c == 's')
 		return (ft_print_str(doguinho));
-	return (0);
+	if (*c == 'd')
+		return (ft_print_dec(doguinho));
+
+	return (0); //aaaaaaaaaaaaaaa
 }
