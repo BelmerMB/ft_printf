@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emetras- <emetras-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 20:26:52 by emetras-          #+#    #+#             */
-/*   Updated: 2022/06/24 17:56:43 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/11 13:05:17 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intsz(int b)
+static int	ft_intsz(int b)
 {
 	int	sz;
 
@@ -25,7 +25,7 @@ int	ft_intsz(int b)
 	return (sz);
 }
 
-void	ft_intascii(int size, char *ptr, unsigned int aux)
+static void	ft_intascii(int size, char *ptr, unsigned int aux)
 {
 	while (size-- >= 1)
 	{

@@ -15,7 +15,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-// #include "libft.h"
+#include "../libft/libft.h"
 
 int	ft_printf(const char *, ...);
 int	ft_print_str(va_list	list);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 static int ft_arguments(const char	*c, va_list	doguinho);
 

@@ -1,8 +1,8 @@
 NAME		= libftprintf.a
 
-SRCS		= ft_printf.c ft_printf_utils.c
+SRCS		= ./src/ft_printf.c ./src/ft_printf_utils.c
 
-HEADER		= ft_printf.h
+HEADER		= ft_printf.h 
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -23,5 +23,7 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+
+
 
 .PHONY: all clean fclean re
