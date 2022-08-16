@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:52:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/11 13:38:29 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/15 13:48:06 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,17 @@ void main(void)
     //Original function return error when tries to print "-2147483648" and "2147483648"
     // format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long int’ = "-2147483648" and "2147483648"
     printf("\nmy       return = %d \n", ft_printf("My print        = %d", 0));
-
     printf("\n________________________\n\n");
-    ft_printf("My print        = %d \n", 0);
+    
+    printf("Unsigned int test - u\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %u", -245687));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %u", -245687));
+    printf("\n________________________\n\n");
 
+    printf("MULTI TEST - u\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %u, %s, %%, %c", -245687, "string", 's'));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %u, %s, %%, %c", -245687, "string", 's'));
+    printf("\n________________________\n\n");
+
+    
 }

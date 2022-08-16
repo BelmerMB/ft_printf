@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:58:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/12 10:40:25 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/15 12:46:15 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,33 @@ int	ft_print_dec(va_list list)
 		i++;
 	write(1, asc, i);
 	free (asc);
+	return (i);
+}
+
+int	ft_print_unsigned (unsigned int nbr)
+{
+	unsigned int	sz;
+	unsigned int	i;
+	char			*ptr;
+
+	sz = nbr;
+	i = 0;
+	while (sz)
+	{
+		sz = sz /10;
+		i++;
+	}
+	ptr = ft_calloc(i, sizeof (unsigned int));
+	if (!ptr)
+		return (0);
+	while (i-- >= 1)
+	{
+		ptr[i] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+	}
+	i = ft_strlen(ptr);
+	write(1, ptr, i);
+	free (ptr);
 	return (i);
 }
 

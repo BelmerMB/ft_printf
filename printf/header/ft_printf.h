@@ -20,5 +20,6 @@
 int	ft_printf(const char *, ...);
 int	ft_print_str(va_list	list);
 int	ft_print_dec(va_list list);
+int	ft_print_unsigned (unsigned int nbr);
 
 #endif
