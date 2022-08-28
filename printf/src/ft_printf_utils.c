@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:58:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/15 12:46:15 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/28 17:26:05 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,5 @@ int	ft_print_unsigned (unsigned int nbr)
 	free (ptr);
 	return (i);
 }
+
 

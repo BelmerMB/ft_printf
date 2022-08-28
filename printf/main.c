@@ -6,11 +6,11 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:52:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/15 13:48:06 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/28 19:50:50 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "./header/ft_printf.h"
 #include <stdio.h>
 
 void main(void)
@@ -26,7 +26,7 @@ void main(void)
     printf("\nOriginal return = %d\n", printf   ("Original print  = %c", 68));
     printf("\nmy       return = %d\n", ft_printf("My print        = %c", 68));
     printf("\n________________________\n\n");
-    
+
     printf("String test - s\n\n");
     printf("\nOriginal return = %d\n", printf   ("Original print  = %s", "teste de 36 letras"));
     printf("\nmy       return = %d\n", ft_printf("My print        = %s", "teste de 36 letras"));
@@ -54,5 +54,23 @@ void main(void)
     printf("\nmy       return = %d\n", ft_printf("My print        = %u, %s, %%, %c", -245687, "string", 's'));
     printf("\n________________________\n\n");
 
-    
+    printf("Test Hex - x\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %x, %x, %x", 256, 15, 0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %x, %x, %x", 256, 15, 0));
+    printf("\n________________________\n\n");
+
+    printf("Test Hex - X\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %X, %X, %X", 256, 15, 0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %X, %X, %X", 256, 15, 0));
+    printf("\n________________________\n\n");
+
+    printf("Test Hex - x\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %x, %x, %x", -256, -15, -0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %x, %x, %x", -256, -15, -0));
+    printf("\n________________________\n\n");
+
+    printf("multi test  - x\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %%%x, %x, %x", -256, -15, -0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %%%x, %x, %x", -256, -15, -0));
+    printf("\n________________________\n\n");
 }

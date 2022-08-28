@@ -1,6 +1,6 @@
 NAME		= libftprintf.a
 
-SRCS		= ./src/ft_printf.c ./src/ft_printf_utils.c
+SRCS		= ./src/ft_printf.c ./src/ft_printf_utils.c ./src/ft_convert_hex.c
 
 HEADER		= ft_printf.h 
 

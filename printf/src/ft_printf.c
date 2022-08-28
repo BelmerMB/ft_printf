@@ -55,6 +55,10 @@ static int ft_arguments(const char *c, va_list doguinho)
 		return (ft_print_dec(doguinho));
 	if (*c == 'u')
 		return (ft_print_unsigned(va_arg(doguinho, unsigned int)));
+	if (*c == 'x')
+		return (ft_print_hex(va_arg(doguinho, unsigned int), 'a'));
+	if (*c == 'X')
+		return (ft_print_hex(va_arg(doguinho, unsigned int), 'A'));
 
 	return (0); //aaaaaaaaaaaaaaa
 }
