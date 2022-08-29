@@ -61,6 +61,6 @@ static int ft_arguments(const char *c, va_list doguinho)
 		return (ft_print_hex(va_arg(doguinho, unsigned int), 'A'));
 	if (*c == 'p')
 		return (ft_print_ptr(va_arg(doguinho, unsigned long int)));
-
-	return (0);
+	else
+		return (write(1, "%", 1), write(1, c, 1), 2);
 }
