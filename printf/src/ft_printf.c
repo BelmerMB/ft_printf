@@ -51,7 +51,7 @@ static int ft_arguments(const char *c, va_list doguinho)
 	}
 	if(*c == 's')
 		return (ft_print_str(doguinho));
-	if (*c == 'd')
+	if (*c == 'd' || *c == 'i')
 		return (ft_print_dec(doguinho));
 	if (*c == 'u')
 		return (ft_print_unsigned(va_arg(doguinho, unsigned int)));
@@ -59,6 +59,8 @@ static int ft_arguments(const char *c, va_list doguinho)
 		return (ft_print_hex(va_arg(doguinho, unsigned int), 'a'));
 	if (*c == 'X')
 		return (ft_print_hex(va_arg(doguinho, unsigned int), 'A'));
+	if (*c == 'p')
+		return (ft_print_ptr(va_arg(doguinho, unsigned long int)));
 
-	return (0); //aaaaaaaaaaaaaaa
+	return (0);
 }

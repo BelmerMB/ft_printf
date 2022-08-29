@@ -18,9 +18,10 @@
 #include "../libft/libft.h"
 
 int	ft_printf(const char *, ...);
-int	ft_print_str(va_list	list);
+int	ft_print_str(va_list list);
 int	ft_print_dec(va_list list);
-int ft_print_hex(unsigned int number, char upcase);
+int	ft_print_hex(unsigned long int number, char upcase);
 int	ft_print_unsigned(unsigned int nbr);
+int	ft_print_ptr(unsigned long int nbr);
 
 #endif

@@ -6,19 +6,19 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:26:31 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/28 19:45:23 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/28 21:01:45 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-static int	ft_size_nbr(unsigned int nbr);
-static int	ft_print(char *nbr_in_hexa);
+static unsigned long int	ft_size_nbr(unsigned long int nbr);
+static unsigned long int	ft_print(char *nbr_in_hexa);
 
-int	ft_print_hex(unsigned int nbr, char upcase)
+int	ft_print_hex(unsigned long int nbr, char upcase)
 {
-	unsigned int	size_nbr;
-	char			*nbr_in_hexa; 
+	unsigned long int	size_nbr;
+	char	*nbr_in_hexa; 
 
 	size_nbr = ft_size_nbr(nbr);
 	if(!size_nbr)
@@ -46,9 +46,9 @@ int	ft_print_hex(unsigned int nbr, char upcase)
 	return (size_nbr);
 }
 
-static int	ft_size_nbr(unsigned int nbr)
+static unsigned long int	ft_size_nbr(unsigned long int nbr)
 {
-	unsigned int	size;
+	unsigned long int	size;
 
 	size = 0;
 	while(nbr)
@@ -59,9 +59,9 @@ static int	ft_size_nbr(unsigned int nbr)
 	return (size);
 }
 
-static int	ft_print(char *nbr_in_hexa)
+static unsigned long int	ft_print(char *nbr_in_hexa)
 {
-	unsigned int	size;
+	unsigned long int	size;
 
 	size = 0;
 	while (nbr_in_hexa[size])

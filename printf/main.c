@@ -6,15 +6,18 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:52:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/28 19:50:50 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/28 21:29:29 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./header/ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 void main(void)
 {
+    char *str = "word";
+
                 //Single test
     printf("________________________\n\n");
     printf("percentage  test - %%\n\n");
@@ -70,7 +73,49 @@ void main(void)
     printf("\n________________________\n\n");
 
     printf("multi test  - x\n\n");
-    printf("\nOriginal return = %d\n", printf   ("Original print  = %%%x, %x, %x", -256, -15, -0));
-    printf("\nmy       return = %d\n", ft_printf("My print        = %%%x, %x, %x", -256, -15, -0));
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %%%x, %x, %x", 245620145, -15, -0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %%%x, %x, %x", 245620145, -15, -0));
     printf("\n________________________\n\n");
+
+    printf("Pointer test - p\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %p, %p", &str, (char *)0, (char *)-256));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %p, %p", &str, (char *)0, (char *)-256));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - INT_MIN\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", INT_MIN, INT_MIN, INT_MIN, INT_MIN, INT_MIN, INT_MIN));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", INT_MIN, INT_MIN, INT_MIN, INT_MIN, INT_MIN, INT_MIN));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - INT_MAX\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - U-INT_MAX\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - LONG_MAX\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX, LONG_MAX));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - LONG_MIN\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN, LONG_MIN));
+    printf("\n________________________\n\n");
+
+    printf("Rodrigo test - ULONG_MAX\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX));
+    printf("\n________________________\n\n");
+
+    printf("Unsigned int test - u\n\n");
+    printf("\nOriginal return = %d\n", printf   ("Original print  = %u", 0));
+    printf("\nmy       return = %d\n", ft_printf("My print        = %u", 0));
+    printf("\n________________________\n\n");
+
+
 }

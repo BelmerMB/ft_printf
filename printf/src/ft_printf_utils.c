@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:58:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/28 17:26:05 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/08/28 21:33:11 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,14 @@ int	ft_print_unsigned (unsigned int nbr)
 
 	sz = nbr;
 	i = 0;
+	if (!nbr)
+		return(write(1, "0", 1));
 	while (sz)
 	{
 		sz = sz /10;
 		i++;
 	}
-	ptr = ft_calloc(i, sizeof (unsigned int));
+	ptr = ft_calloc(i + 1, sizeof (unsigned int));
 	if (!ptr)
 		return (0);
 	while (i-- >= 1)
