@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:52:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/09/10 13:17:30 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/09/10 13:28:02 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,11 +110,6 @@ void main(void)
     printf("Rodrigo test - ULONG_MAX\n\n");
     printf("\nOriginal return = %d\n", printf   ("Original print  = %p, %x, %X, %d, %i, %u", ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX));
     printf("\nmy       return = %d\n", ft_printf("My print        = %p, %x, %X, %d, %i, %u", ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX, ULONG_MAX));
-    printf("\n________________________\n\n");
-
-    printf("Unsigned int test - u\n\n");
-    printf("\nOriginal return = %d\n", printf   ("Original print  = %u", 0));
-    printf("\nmy       return = %d\n", ft_printf("My print        = %u", 0));
     printf("\n________________________\n\n");
 
 }
