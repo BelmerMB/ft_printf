@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:52:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/08/28 21:29:29 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/09/10 13:17:30 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,5 @@ void main(void)
     printf("\nOriginal return = %d\n", printf   ("Original print  = %u", 0));
     printf("\nmy       return = %d\n", ft_printf("My print        = %u", 0));
     printf("\n________________________\n\n");
-
 
 }
